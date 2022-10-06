@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-gradient-to-r from-[#0f172a] to-[#17324e] text-[#38bdf8]" >
+    <div class="container w-fit mx-auto">
+        <h1 class="text-[3rem] font-bold text-center text-gray-300 my-5">Word Count App</h1>
+    <div id="display" class="flex gap-8 my-4 justify-between text-[22px]">
+        <div >
+            Words:
+            <span id="words" class="text-gray-300">
+                0
+            </span>
+        </div>
+        <div >
+            Letters:
+            <span id="letters" class="text-gray-300">
+                 0   
+            </span>
+        </div>
+        <div >
+            Lines:
+            <span id="lines" class="text-gray-300">
+                  0      
+            </span>
+        </div>
+
+    </div>
+    <div class="flex flex-col gap-1">
+        <textarea name="text" id="text" class="w-[600px] h-[400px] resize-none border-2 border-black bg-[#171117] text-[#fab8fa] text-[20px]"></textarea>
+        <button onclick=clearInput() class="text-[22px] bg-gray-800 text-white rounded-lg p-3">Clear</button>
+    </div>
+   
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
